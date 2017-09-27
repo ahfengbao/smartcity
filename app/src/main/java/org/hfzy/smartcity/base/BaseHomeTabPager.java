@@ -47,7 +47,6 @@ public abstract class BaseHomeTabPager implements BaseOperator, View.OnClickList
         frame_content= (FrameLayout) root.findViewById(R.id.tab_frame);
         //显示侧滑菜单
         ibSlidingMenu = (ImageButton) root.findViewById(R.id.ib_slidingmenu);
-//        ibMenu = (ImageButton) root.findViewById(R.id.ib_menu);
         ibSlidingMenu.setOnClickListener(this);
         tvTitle = (TextView) root.findViewById(R.id.tv_title);
         initView();
@@ -60,8 +59,20 @@ public abstract class BaseHomeTabPager implements BaseOperator, View.OnClickList
         ((HomeActivity) context).getSlidingMenu().toggle();
     }
 
+    private static  final  int LIST_STATE=1;
+    private static  final  int GRID_START=2;
+    private int state = LIST_STATE;
+
+    //切换按钮状态
     @OnClick(R.id.ib_menu)
     private void switchListState(View view){
+        if (state==LIST_STATE){
+            state=GRID_START;
+            ibMenu.setBackgroundResource(R.drawable.icon_pic_list_type);
+        }else{
+            state=LIST_STATE;
+            ibMenu.setBackgroundResource(R.drawable.icon_pic_grid_type);
+        }
         switchState();
     }
 
