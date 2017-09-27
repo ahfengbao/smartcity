@@ -1,11 +1,9 @@
 package org.hfzy.smartcity.activity;
 
-import android.animation.StateListAnimator;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -50,7 +48,7 @@ public class SplashActivity extends AppCompatActivity {
         alphaAnimation.setFillAfter(true);
 
         //缩放动画
-        ScaleAnimation scaleAnimation = new ScaleAnimation(0.5f,1f,0.5f,1f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0.1f,1f,0.1f,1f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
         scaleAnimation.setDuration(2000);
         scaleAnimation.setFillAfter(true);
 
