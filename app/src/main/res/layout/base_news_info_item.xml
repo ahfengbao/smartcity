@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:padding="1dp"
+        android:src="@mipmap/news_pic_default"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@id/tv_title"
+            android:textColor="@color/balck"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:minLines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="今天来面试的全是妹子"/>
+        <TextView
+            android:id="@+id/tv_date"
+            android:textSize="14sp"
+            android:text="2014-11-10 09:10:55"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_comment"
+        android:background="@mipmap/icon_news_comment_num"
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 轮播图的布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
+        <org.hfzy.smartcity.view.HorizontalSrcollViewPager
+            android:id="@+id/vp"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#77999999">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:text="标题"
+                />
+            <!-- 小圆点的占位 -->
+            <LinearLayout
+                android:id="@+id/ll_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"/>
+        </RelativeLayout>
+</RelativeLayout>

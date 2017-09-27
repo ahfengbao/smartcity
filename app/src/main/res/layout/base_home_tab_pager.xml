@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:onClick="showSlidingMenu"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ib_slidingmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/img_menu" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="新闻"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_pic_grid_type" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tab_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

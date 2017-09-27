@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <org.hfzy.smartcity.view.NoScollViewpager
+        android:id="@+id/vp_content"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </org.hfzy.smartcity.view.NoScollViewpager>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bottom_tab_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/home_fragment_tab_tv_style"
+            android:checked="true"
+            android:drawableTop="@drawable/home_selector"
+            android:text="主页" />
+
+        <RadioButton
+            android:id="@+id/rb_news_center"
+            style="@style/home_fragment_tab_tv_style"
+            android:drawableTop="@drawable/newscenter_selector"
+            android:text="新闻中心" />
+
+        <RadioButton
+            android:id="@+id/rb_smart_service"
+            style="@style/home_fragment_tab_tv_style"
+            android:drawableTop="@drawable/smartservice_selector"
+            android:text="智慧服务" />
+
+        <RadioButton
+            android:id="@+id/rb_govaffairs"
+            style="@style/home_fragment_tab_tv_style"
+            android:drawableTop="@drawable/glvaffairs_selector"
+            android:text="政务" />
+
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/home_fragment_tab_tv_style"
+
+            android:drawableTop="@drawable/setting_selector"
+            android:text="设置" />
+
+
+    </RadioGroup>
+</LinearLayout>

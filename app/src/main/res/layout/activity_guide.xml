@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hfzy.smartcity.activity.GuideActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <Button
+        android:id="@+id/btn_enterhome"
+        android:text="开始体验"
+        android:onClick="enterhome"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/btn_red_seletor"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <!-- 移动点的总布局 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <!-- 放置灰色的点   后面通过代码去添加 -->
+        <LinearLayout
+            android:id="@+id/ll_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+        <View
+            android:id="@+id/red_point"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/shape_point_red"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

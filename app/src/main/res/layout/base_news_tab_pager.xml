@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <org.hfzy.smartcity.view.HorizontalSrcollViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+        </org.hfzy.smartcity.view.HorizontalSrcollViewPager>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#77999999"
+            android:padding="8dp"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <!-- 小圆点的占位 -->
+        <LinearLayout
+            android:id="@+id/ll_point"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
