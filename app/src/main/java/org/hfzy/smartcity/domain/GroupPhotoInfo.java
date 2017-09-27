@@ -9,7 +9,6 @@ public class GroupPhotoInfo {
 	
 	public GroupPhotoDataInfo data;
 	public String retcode;
-
 	public class GroupPhotoDataInfo{
 		public String countcommenturl;
 		public String more;
