@@ -17,6 +17,11 @@ public class SmartServiceTabPager extends BaseHomeTabPager {
     }
 
     @Override
+    public void switchState() {
+
+    }
+
+    @Override
     public void initView() {
 
         ibMenu.setVisibility(View.INVISIBLE);

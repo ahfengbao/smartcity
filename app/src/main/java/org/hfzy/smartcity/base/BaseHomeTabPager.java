@@ -9,6 +9,9 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnClick;
 
 import org.hfzy.smartcity.R;
 import org.hfzy.smartcity.activity.HomeActivity;
@@ -28,6 +31,7 @@ public abstract class BaseHomeTabPager implements BaseOperator, View.OnClickList
     public FrameLayout frame_content;//占位  标签页的内容  后面进行处理
     public TextView tvTitle;
     public ImageButton ibSlidingMenu;
+    @ViewInject(R.id.ib_menu)
     public ImageButton ibMenu;
 
 
@@ -39,10 +43,11 @@ public abstract class BaseHomeTabPager implements BaseOperator, View.OnClickList
     public void init() {
         //完成整体布局加载
         root = View.inflate(context, R.layout.base_home_tab_pager, null);
+        ViewUtils.inject(this,root,true);
         frame_content= (FrameLayout) root.findViewById(R.id.tab_frame);
         //显示侧滑菜单
         ibSlidingMenu = (ImageButton) root.findViewById(R.id.ib_slidingmenu);
-        ibMenu = (ImageButton) root.findViewById(R.id.ib_menu);
+//        ibMenu = (ImageButton) root.findViewById(R.id.ib_menu);
         ibSlidingMenu.setOnClickListener(this);
         tvTitle = (TextView) root.findViewById(R.id.tv_title);
         initView();
@@ -54,6 +59,14 @@ public abstract class BaseHomeTabPager implements BaseOperator, View.OnClickList
     public void onClick(View v) {
         ((HomeActivity) context).getSlidingMenu().toggle();
     }
+
+    @OnClick(R.id.ib_menu)
+    private void switchListState(View view){
+        switchState();
+    }
+
+    //抽象方法
+    public abstract void switchState();
 
 
 }

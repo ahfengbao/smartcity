@@ -51,6 +51,11 @@ public class NewsCenterTabPager extends BaseHomeTabPager implements ViewPager.On
     }
 
     @Override
+    public void switchState() {
+        groupPhotoPager.switchState();
+    }
+
+    @Override
     public void initView() {
         ibMenu.setVisibility(View.INVISIBLE);
         ibSlidingMenu.setVisibility(View.VISIBLE);
@@ -147,7 +152,14 @@ public class NewsCenterTabPager extends BaseHomeTabPager implements ViewPager.On
     @Override
     public void setTilte(int position) {
         tvTitle.setText(newsCenterInfo.data.get(position).title);
+        if (position==2){
+            ibMenu.setVisibility(View.VISIBLE);
+        }else {
+            ibMenu.setVisibility(View.GONE);
+        }
     }
+
+
 
     @Override
     public void addView(int position) {

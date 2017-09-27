@@ -18,6 +18,11 @@ public class GovaffairsTabPager extends BaseHomeTabPager {
     }
 
     @Override
+    public void switchState() {
+
+    }
+
+    @Override
     public void initView() {
         ibMenu.setVisibility(View.INVISIBLE);
         ibSlidingMenu.setVisibility(View.VISIBLE);

@@ -17,6 +17,11 @@ public class SettingTabPager extends BaseHomeTabPager {
     }
 
     @Override
+    public void switchState() {
+
+    }
+
+    @Override
     public void initView() {
 
 
